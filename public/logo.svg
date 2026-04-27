@@ -1,0 +1,40 @@
+<svg width="240" height="220" viewBox="0 0 240 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Colores -->
+    <style>
+      .blue { fill: #0C2D48; }
+      .orange { fill: #FF9F1A; }
+    </style>
+  </defs>
+
+  <!-- Libro (lado izquierdo) -->
+  <path class="blue" d="M40 30 
+    C30 30, 20 40, 20 55 
+    L20 165 
+    C20 180, 30 190, 40 190 
+    L100 170 
+    L100 50 
+    C100 40, 90 30, 80 30 Z"></path>
+
+  <!-- Páginas del libro -->
+  <path d="M30 50 Q60 80 95 90" stroke="white" stroke-width="3" fill="none"></path>
+  <path d="M30 65 Q60 95 95 105" stroke="white" stroke-width="2" fill="none"></path>
+  <path d="M30 80 Q60 110 95 120" stroke="white" stroke-width="1.5" fill="none"></path>
+
+  <!-- Lado derecho (edificio/digital) -->
+  <path class="blue" d="M100 50 
+    C110 40, 130 40, 140 50 
+    L140 120 
+    C140 130, 130 140, 120 140 
+    L100 160 Z"></path>
+
+  <!-- Pixeles (transformación digital) -->
+  <rect class="orange" x="135" y="30" width="12" height="12" rx="2"></rect>
+  <rect class="orange" x="150" y="45" width="12" height="12" rx="2"></rect>
+  <rect class="orange" x="130" y="50" width="12" height="12" rx="2"></rect>
+  <rect class="orange" x="145" y="65" width="12" height="12" rx="2"></rect>
+  <rect class="orange" x="160" y="60" width="12" height="12" rx="2"></rect>
+
+  <!-- Cursor -->
+  <path class="orange" d="M120 140 L165 170 L145 175 L150 195 L135 200 L130 180 L115 185 Z"></path>
+</svg>

@@ -1,4 +1,26 @@
 @import "tailwindcss";
 
-/* Esta línea es la que "despierta" el diseño */
-@source "../**/*.{ts,tsx}";
+@theme {
+  /* Definición de la Paleta de Colores Corporativa (según Brand Board) */
+  --color-brand-dark: #0c2d48;    /* El azul oscuro principal */
+  --color-brand-orange: #ff9f1a;  /* El naranja de acento */
+  --color-brand-light: #e6f0ff;   /* El azul muy claro de fondo */
+  --color-brand-bg: #f3f6f9;      /* El gris azulado de fondo secundario */
+  --color-brand-white: #ffffff;   /* Blanco puro */
+
+  /* Mapeo de nombres semánticos para facilitar el uso */
+  --color-primary: var(--color-brand-dark);
+  --color-accent: var(--color-brand-orange);
+  --color-muted: var(--color-brand-light);
+}
+
+/* Configuraciones globales básicas */
+@layer base {
+  body {
+    @apply bg-brand-bg text-slate-800 antialiased;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+}
