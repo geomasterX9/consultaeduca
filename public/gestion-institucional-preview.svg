@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="gestionTitle">
-  <title id="gestionTitle">Vista previa de Gestión Institucional</title>
+  <title id="gestionTitle">Vista previa de Gestión Escolar</title>
   <defs>
     <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0c2d48"/>
@@ -29,7 +29,7 @@
   <circle cx="102" cy="98" r="7" fill="#ff9f1a"/>
   <circle cx="126" cy="98" r="7" fill="#e6f0ff"/>
   <circle cx="150" cy="98" r="7" fill="#e6f0ff"/>
-  <text x="400" y="103" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0c2d48">Panel de Gestión Institucional</text>
+  <text x="400" y="103" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#0c2d48">Panel de Gestión Escolar</text>
   <line x1="70" y1="126" x2="730" y2="126" stroke="#e6f0ff" stroke-width="2"/>
 
   <!-- KPI cards -->
