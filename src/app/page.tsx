@@ -194,19 +194,19 @@ export default function Home() {
               <p className="text-slate-600 font-inter text-sm mt-3 leading-relaxed">Herramienta integral de gestión y seguimiento pedagógico para optimizar la labor docente diaria.</p>
             </a>
 
-            <div className="group block">
+            <a href="https://fichas-descriptivas.vercel.app/" target="_blank" className="group block">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-brand-bg mb-7 shadow-md group-hover:shadow-2xl transition-all border border-slate-100">
                 <Image
                   src="/gestion-institucional-preview.svg"
-                  alt="Vista previa del panel de Gestión Institucional"
+                  alt="Vista previa de Gestión Escolar"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-2xl font-bold font-poppins text-brand-dark">Gestión Institucional</h3>
+              <h3 className="text-2xl font-bold font-poppins text-brand-dark group-hover:text-brand-orange transition-colors">Gestión Escolar</h3>
               <p className="text-slate-600 font-inter text-sm mt-3 leading-relaxed">Dashboards inteligentes para el seguimiento de KPIs académicos y alertas tempranas.</p>
-            </div>
+            </a>
 
             <a href="https://coordinadorpro.vercel.app" target="_blank" className="group block">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-brand-bg mb-7 shadow-md group-hover:shadow-2xl transition-all border border-slate-100">
