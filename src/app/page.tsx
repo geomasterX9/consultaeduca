@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   // Lógica para manejar el estado del formulario
@@ -31,6 +32,7 @@ export default function Home() {
         setEstadoEnvio("Hubo un error. Por favor, intenta de nuevo.");
       }
     } catch (error) {
+      console.error("Error al enviar el formulario:", error);
       setEstadoEnvio("Error de conexión. Intenta contactarnos por WhatsApp.");
     }
   };
@@ -42,15 +44,16 @@ export default function Home() {
         <div className="flex justify-between items-center max-w-7xl mx-auto h-28 px-6 lg:px-8">
           
           {/* LOGO MAXIMIZADO SIN ERRORES */}
-          <a href="/" className="relative block h-[95px] w-[340px] group py-2">
-            <Image 
-              src="/logo.jpg" 
+          <Link href="/" className="relative block h-[95px] w-[340px] group py-2">
+            <Image
+              src="/logo.jpg"
               alt="Logo ConsultaEduca"
               fill
-              className="object-contain object-left transition-transform group-hover:scale-[1.02] mix-blend-multiply" 
-              priority 
+              sizes="340px"
+              className="object-contain object-left transition-transform group-hover:scale-[1.02] mix-blend-multiply"
+              preload
             />
-          </a>
+          </Link>
 
           {/* Menú Desktop */}
           <div className="hidden md:flex items-center space-x-8 text-base font-semibold text-brand-dark">
@@ -87,11 +90,15 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Contenedor de la Imagen Hero */}
           <div className="relative w-full max-w-2xl mx-auto lg:ml-auto aspect-video lg:aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-4 border-brand-light/30">
-            <img 
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800" 
-              alt="Consultoría Educativa" 
-              className="w-full h-full object-cover"
+            <Image
+              src="/portada.png"
+              alt="Equipo de ConsultaEduca en capacitación"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+              preload
             />
           </div>
         </div>
@@ -160,24 +167,42 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <a href="https://planeadorpro.com.mx" target="_blank" className="group block">
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-brand-bg mb-7 shadow-md group-hover:shadow-2xl transition-all border border-slate-100 flex items-center justify-center p-8">
-                <div className="text-brand-dark/40 font-bold font-poppins text-lg text-center uppercase tracking-wider">Preview Planeador Pro</div>
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-brand-bg mb-7 shadow-md group-hover:shadow-2xl transition-all border border-slate-100">
+                <Image
+                  src="/planeadorpro1.png"
+                  alt="Vista previa de Planeador NEM Pro"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <h3 className="text-2xl font-bold font-poppins text-brand-dark group-hover:text-brand-orange transition-colors">Planeador NEM Pro</h3>
               <p className="text-slate-600 font-inter text-sm mt-3 leading-relaxed">Ecosistema digital con IA para la creación de programas analíticos y didácticos (Plan 2022).</p>
             </a>
 
             <a href="https://bitacorapro.com.mx" target="_blank" className="group block">
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-brand-bg mb-7 shadow-md group-hover:shadow-2xl transition-all border border-slate-100 flex items-center justify-center p-8">
-                <div className="text-brand-dark/40 font-bold font-poppins text-lg text-center uppercase tracking-wider">Preview Bitácora Pro</div>
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-brand-bg mb-7 shadow-md group-hover:shadow-2xl transition-all border border-slate-100">
+                <Image
+                  src="/bitacora-preview.svg"
+                  alt="Vista previa de Bitácora Digital Docente"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <h3 className="text-2xl font-bold font-poppins text-brand-dark group-hover:text-brand-orange transition-colors">Bitácora Digital Docente</h3>
               <p className="text-slate-600 font-inter text-sm mt-3 leading-relaxed">Herramienta integral de gestión y seguimiento pedagógico para optimizar la labor docente diaria.</p>
             </a>
 
             <div className="group block">
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-brand-bg mb-7 shadow-md group-hover:shadow-2xl transition-all border border-slate-100 flex items-center justify-center p-8">
-                <div className="text-brand-dark/40 font-bold font-poppins text-lg text-center uppercase tracking-wider">Sistemas de Analítica</div>
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-brand-bg mb-7 shadow-md group-hover:shadow-2xl transition-all border border-slate-100">
+                <Image
+                  src="/gestion-institucional-preview.svg"
+                  alt="Vista previa del panel de Gestión Institucional"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <h3 className="text-2xl font-bold font-poppins text-brand-dark">Gestión Institucional</h3>
               <p className="text-slate-600 font-inter text-sm mt-3 leading-relaxed">Dashboards inteligentes para el seguimiento de KPIs académicos y alertas tempranas.</p>
@@ -280,10 +305,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto text-center space-y-6">
           <div className="relative h-[60px] w-[220px] mx-auto">
             <Image 
-              src="/logo.jpg" 
+              src="/logo.jpg"
               alt="Logo ConsultaEduca Footer"
               fill
-              className="object-contain rounded-lg opacity-90" 
+              sizes="220px"
+              className="object-contain rounded-lg opacity-90"
             />
           </div>
           <p className="font-inter">Transformamos ideas en soluciones educativas.</p>
