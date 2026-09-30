@@ -206,6 +206,9 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold font-poppins text-brand-dark group-hover:text-brand-orange transition-colors">Gestión Escolar</h3>
               <p className="text-slate-600 font-inter text-sm mt-3 leading-relaxed">Dashboards inteligentes para el seguimiento de KPIs académicos y alertas tempranas.</p>
+              <div className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 rounded-full bg-brand-light text-brand-dark text-xs font-bold font-inter">
+                Explora la demo · usuario <code className="font-mono">demo</code> · contraseña <code className="font-mono">demo123</code>
+              </div>
             </a>
 
             <a href="https://coordinadorpro.vercel.app" target="_blank" className="group block">
