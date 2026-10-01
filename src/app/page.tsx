@@ -226,7 +226,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-2xl font-bold font-poppins text-brand-dark group-hover:text-brand-orange transition-colors">CoordinadorPro</h3>
-              <p className="text-slate-600 font-inter text-sm mt-3 leading-relaxed">Plataforma de coordinación académica: acompañamiento docente, seguimiento de Consejo Técnico Escolar y captura de calificaciones en un solo lugar.</p>
+              <p className="text-slate-600 font-inter text-sm mt-3 leading-relaxed">Plataforma integral de coordinación académica: control de planeaciones didácticas, visitas y observación de clase, seguimiento de entrega de calificaciones, incidencias y Consejo Técnico Escolar, todo en un solo lugar.</p>
             </a>
 
             <a href="https://app-vercel-one-beta.vercel.app" target="_blank" className="group block">
