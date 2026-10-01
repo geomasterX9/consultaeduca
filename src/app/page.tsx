@@ -129,16 +129,16 @@ export default function Home() {
               <div className="w-20 h-20 bg-brand-light rounded-full flex items-center justify-center mb-8 text-brand-dark ring-4 ring-brand-light/50">
                 <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
               </div>
-              <h3 className="text-2xl font-bold font-poppins text-brand-dark mb-4">Desarrollo EdTech</h3>
-              <p className="text-slate-600 font-inter text-base leading-relaxed">Software y aplicaciones educativas a medida para automatizar procesos y mejorar la experiencia de aprendizaje.</p>
+              <h3 className="text-2xl font-bold font-poppins text-brand-dark mb-4">Tecnología Educativa</h3>
+              <p className="text-slate-600 font-inter text-base leading-relaxed">Desde aplicaciones a medida hasta el equipamiento tecnológico de tu institución: te acompañamos en cada paso de tu transformación digital.</p>
             </div>
 
             <div className="p-10 rounded-3xl bg-brand-white border border-slate-100 hover:shadow-2xl transition-all group flex flex-col items-center text-center">
               <div className="w-20 h-20 bg-brand-light rounded-full flex items-center justify-center mb-8 text-brand-dark ring-4 ring-brand-light/50">
                 <svg className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
               </div>
-              <h3 className="text-2xl font-bold font-poppins text-brand-dark mb-4">Analítica Escolar</h3>
-              <p className="text-slate-600 font-inter text-base leading-relaxed">Dashboards inteligentes para transformar los datos académicos en decisiones estratégicas de éxito.</p>
+              <h3 className="text-2xl font-bold font-poppins text-brand-dark mb-4">Seguimiento Académico</h3>
+              <p className="text-slate-600 font-inter text-base leading-relaxed">Reportes visuales e inteligentes que transforman la información académica en decisiones claras para mejorar los resultados.</p>
             </div>
           </div>
         </div>
@@ -209,7 +209,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-2xl font-bold font-poppins text-brand-dark group-hover:text-brand-orange transition-colors">Gestión Escolar</h3>
-              <p className="text-slate-600 font-inter text-sm mt-3 leading-relaxed">Dashboards inteligentes para el seguimiento de KPIs académicos y alertas tempranas.</p>
+              <p className="text-slate-600 font-inter text-sm mt-3 leading-relaxed">Reportes visuales e inteligentes para dar seguimiento a los indicadores académicos y detectar alertas tempranas.</p>
               <div className="inline-flex items-center gap-1.5 mt-3 px-3 py-1.5 rounded-full bg-brand-light text-brand-dark text-xs font-bold font-inter">
                 Explora la demo · usuario <code className="font-mono">demo</code> · contraseña <code className="font-mono">demo123</code>
               </div>
