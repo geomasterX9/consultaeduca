@@ -1,12 +1,29 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+
+const HERO_IMAGES = [
+  { src: "/portada.png", alt: "Equipo de ConsultaEduca en capacitación" },
+  { src: "/hero-capacitacion.jpg", alt: "Taller de capacitación docente en curso" },
+  { src: "/hero-aula.jpg", alt: "Aula escolar integrando tecnología educativa" },
+];
 
 export default function Home() {
   // Lógica para manejar el estado del formulario
   const [estadoEnvio, setEstadoEnvio] = useState("");
+
+  // Crossfade automático de las imágenes del hero
+  const [heroIndex, setHeroIndex] = useState(0);
+
+  useEffect(() => {
+    if (HERO_IMAGES.length < 2) return;
+    const interval = setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -94,16 +111,21 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Contenedor de la Imagen Hero */}
+          {/* Contenedor de la Imagen Hero (crossfade automático) */}
           <div className="relative w-full max-w-2xl mx-auto lg:ml-auto aspect-video lg:aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-4 border-brand-light/30">
-            <Image
-              src="/portada.png"
-              alt="Equipo de ConsultaEduca en capacitación"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-              preload
-            />
+            {HERO_IMAGES.map((imagen, index) => (
+              <Image
+                key={imagen.src}
+                src={imagen.src}
+                alt={imagen.alt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className={`object-cover transition-opacity duration-1000 ease-in-out ${
+                  index === heroIndex ? "opacity-100" : "opacity-0"
+                }`}
+                preload={index === 0}
+              />
+            ))}
           </div>
         </div>
       </header>
