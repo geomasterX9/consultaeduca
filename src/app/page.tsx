@@ -17,6 +17,8 @@ export default function Home() {
     formData.append("access_key", "0d8fc43b-0a50-4f57-bfbf-50fa7d6fb6e8");
     // Permite responder directamente al correo del remitente desde Gmail
     formData.append("replyto", formData.get("Correo") as string);
+    // Asunto personalizado del correo de notificación
+    formData.append("subject", `Solicitud de Consultoría en ConsultaEduca · ${formData.get("Nombre")}`);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
